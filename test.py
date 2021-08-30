@@ -25,7 +25,8 @@ system.mem_ranges = [AddrRange('512MB')]
 # Create a simple CPU
 system.cpu = TimingSimpleCPU()
 
-"""This """
+
+"""This is to create cache L1 and L2 """
 
 #Extending the baseCache
 class L1Cache(Cache):
@@ -68,6 +69,7 @@ class L2Cache(Cache):
 
     def connectMemSideBus(self, bus):
         self.mem_side = bus.cpu_side_ports
+
 
 
 # create a L1cache
